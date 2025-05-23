@@ -3,8 +3,8 @@ from flask import Flask, request, render_template
 import joblib
 
 app = Flask(__name__)
-model = joblib.load('Spam_Email_Classifier/model.pkl')
-vectorizer = joblib.load('Spam_Email_Classifier/vectorizer.pkl')
+model = joblib.load('model.pkl')
+vectorizer = joblib.load('vectorizer.pkl')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
