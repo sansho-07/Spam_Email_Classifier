@@ -1,0 +1,50 @@
+#history-list .history-item {
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: 
+        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#history-list .history-item:hover {
+    transform: translateY(-6px) scale(1.03) rotate(-1deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #e0f2fe;
+}
+
+#history-list .history-item p {
+    margin: 0.25rem 0;
+    transition: color 0.2s;
+}
+
+#history-list .history-item:hover p {
+    color: #0ea5e9;
+}
+
+#loading {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
