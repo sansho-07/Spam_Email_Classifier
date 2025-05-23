@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+    <title>Spam Email Classifier</title>
+</head>
+<body>
+    <h2>Spam Email Classifier</h2>
+    <form method="POST">
+        <textarea name="message" rows="6" cols="50" placeholder="Enter email content..."></textarea><br><br>
+        <input type="submit" value="Check">
+    </form>
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
+
+
